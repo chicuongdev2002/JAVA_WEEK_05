@@ -1,7 +1,7 @@
 # Thực hành WWW Week5
 # Yêu cầu
 1. Tạo các enities sao cho khi thực thi sẽ tạo ra các bảng như hình
-   
+![image](https://github.com/chicuongdev2002/JAVA_WEEK5/assets/124854803/b827e762-9b6c-4ca9-835d-f4e2150bed52)   
 3. Viết các repositories interface
 4. Viết các lớp services
 5. Tạo các trang web cho phép công ty đăng tin tuyển người với các skill mong muốn
