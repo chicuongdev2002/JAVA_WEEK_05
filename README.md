@@ -11,14 +11,15 @@
 
 ```markdown
 
-## General Information
-
+## Thông tin
+- Language Java
+- 
 - Host: 127.0.0.1
 - Server version: 11.1.2-MariaDB - mariadb.org binary distribution
 - Server OS: Win64
 - HeidiSQL Version: 12.3.0.6589
 
-## Database Creation
+## Database 
 
 ```sql
 CREATE DATABASE IF NOT EXISTS `work`
