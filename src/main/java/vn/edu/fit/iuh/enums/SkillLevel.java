@@ -1,0 +1,1 @@
+package vn.edu.fit.iuh.enums;public enum SkillLevel {    BEGINNER(1),    INTERMEDIATE(2),    ADVANCED(3),    EXPERT(4);    private int value;    SkillLevel(int value) {        this.value = value;    }    public int getValue() {        return value;    }}

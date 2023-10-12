@@ -1,0 +1,1 @@
+package vn.edu.fit.iuh.enums;public enum SkillType {    SOFT_SKILL(2),    UNSPECIFIC(1),    TECGNICAL_SKILL(0);    private int value;    SkillType(int value) {        this.value = value;    }    public int getValue() {        return value;    }}
