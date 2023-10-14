@@ -34,7 +34,17 @@ public class Candidate {
    @OneToMany(mappedBy = "candidate")
    private List<Experience> experiences;
 
-//    public Candidate(UUID id) {
+    @Override
+    public String toString() {
+        return "Candidate{" +
+                "id=" + id +
+                ", dob=" + dob +
+                ", email='" + email + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
+    //    public Candidate(UUID id) {
 //        this.id = id;
 //    }
 //

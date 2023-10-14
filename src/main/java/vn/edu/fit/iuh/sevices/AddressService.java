@@ -2,13 +2,14 @@ package vn.edu.fit.iuh.sevices;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 import vn.edu.fit.iuh.enities.Address;
 import vn.edu.fit.iuh.repositories.AddressRepository;
 
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class AddressService {
     private final AddressRepository addressRepository;
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());

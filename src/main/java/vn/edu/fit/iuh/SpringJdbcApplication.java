@@ -5,16 +5,21 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import vn.edu.fit.iuh.enities.company;
-import vn.edu.fit.iuh.enities.Skill;
-import vn.edu.fit.iuh.enums.SkillType;
-import vn.edu.fit.iuh.repositories.companyRepository;
+import vn.edu.fit.iuh.enities.Address;
+import vn.edu.fit.iuh.enities.Candidate;
+import vn.edu.fit.iuh.repositories.AddressRepository;
+import vn.edu.fit.iuh.repositories.CandidateRepository;
+
+import java.util.List;
 
 
 @SpringBootApplication
 public class SpringJdbcApplication {
     @Autowired
-private companyRepository companyRepository;
+    private AddressRepository addressRepository;
+    @Autowired
+    private CandidateRepository candidateRepository;
+
     public static void main(String[] args) {
         SpringApplication.run(SpringJdbcApplication.class, args);
     }
@@ -23,8 +28,8 @@ private companyRepository companyRepository;
         return new CommandLineRunner() {
             @Override
             public void run(String... args) throws Exception {
-//                company a=new company(1l,"Nguyen Van Bao","Ho Chi Minh",1,"2","100001")
-//               companyRepository.save()
+                    List<Candidate> list= candidateRepository.findAll();
+                    list.forEach(p-> System.out.println(p));
 
             }
         };

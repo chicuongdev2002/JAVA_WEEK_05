@@ -29,7 +29,7 @@ public class Address {
 
     @Override
     public String toString() {
-        return "company{" +
+        return "address{" +
                 "id=" + id +
                 ", street='" + street + '\'' +
                 ", city='" + city + '\'' +
