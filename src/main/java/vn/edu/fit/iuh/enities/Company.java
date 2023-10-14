@@ -26,11 +26,22 @@ public class Company {
     private String phone;
     @Column(name = "webURL",columnDefinition = "varchar(2000)")
     private String web_url;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(referencedColumnName = "add_id",name = "address")
     private Address address;
     @OneToMany(mappedBy = "company")
     private List<Job> jobs;
 
-
+    @Override
+    public String toString() {
+        return "Company{" +
+                "id=" + id +
+                ", about='" + about + '\'' +
+                ", email='" + email + '\'' +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", web_url='" + web_url + '\'' +
+                ", address=" + address.getId() +
+                '}';
+    }
 }

@@ -26,7 +26,7 @@ public class Candidate {
     private String fullName;
     @Column(name = "phone",columnDefinition = "varchar(15)")
     private String phone;
-   @OneToOne
+   @OneToOne(cascade = CascadeType.ALL)
    @JoinColumn(referencedColumnName = "add_id",name = "address")
     private Address address;
    @OneToMany(mappedBy = "candidate")
@@ -42,9 +42,11 @@ public class Candidate {
                 ", email='" + email + '\'' +
                 ", fullName='" + fullName + '\'' +
                 ", phone='" + phone + '\'' +
+                ", address=" + address +
                 '}';
     }
-    //    public Candidate(UUID id) {
+
+//    public Candidate(UUID id) {
 //        this.id = id;
 //    }
 //
