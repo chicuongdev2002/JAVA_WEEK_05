@@ -16,13 +16,14 @@ import java.util.UUID;
 public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="job_id")
     private long id;
     @Column(name="job_desc",columnDefinition = "varchar(2000)")
     private String description;
     @Column(name="job_name",columnDefinition = "varchar(2000)")
     private String name;
     @ManyToOne
-    @JoinColumn(name = "job_id")
+    @JoinColumn(name = "company")
     private Company company;
     @OneToMany(mappedBy = "job")
     List<JobSkill> jobSkills;

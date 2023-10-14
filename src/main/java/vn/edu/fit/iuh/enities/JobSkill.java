@@ -5,10 +5,11 @@ import lombok.*;
 import vn.edu.fit.iuh.enums.SkillLevel;
 
 @Entity
-@Table
+@Table(name="job_skill")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@IdClass(JobSkillIID.class)
 public class JobSkill {
     @Column(name = "more_infos")
     private String moreInfo;
@@ -19,7 +20,7 @@ public class JobSkill {
     @JoinColumn(name="job_id")
     private Job job;
     @Id
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name="skill_id")
     private Skill skill;
 }

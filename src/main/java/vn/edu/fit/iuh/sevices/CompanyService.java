@@ -2,21 +2,21 @@ package vn.edu.fit.iuh.sevices;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import vn.edu.fit.iuh.enities.company;
-import vn.edu.fit.iuh.repositories.companyRepository;
+import vn.edu.fit.iuh.enities.Company;
+import vn.edu.fit.iuh.repositories.CompanyRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-public class companySevices {
-    private final companyRepository companyRepository;
+public class CompanyService {
+    private final CompanyRepository companyRepository;
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
-    public companySevices(companyRepository companyRepository) {
+    public CompanyService(CompanyRepository companyRepository) {
         this.companyRepository = companyRepository;
     }
 
-    public boolean save(company company) {
+    public boolean save(Company company) {
         try {
             companyRepository.save(company);
 
@@ -28,15 +28,15 @@ public class companySevices {
         return false;
     }
 
-    public Optional<company> findById(long id) {
+    public Optional<Company> findById(long id) {
         return companyRepository.findById(id);
     }
 
-    public List<company> findAll() {
+    public List<Company> findAll() {
         return companyRepository.findAll();
     }
 
-    public Optional<Boolean> update(company company) {
+    public Optional<Boolean> update(Company company) {
         if (!companyRepository.existsById(company.getId())) { // Sử dụng phương thức existsById để kiểm tra sự tồn tại
             return Optional.empty(); // Trả về empty nếu không tồn tại
         }

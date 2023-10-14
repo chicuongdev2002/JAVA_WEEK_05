@@ -1,0 +1,1 @@
+package vn.edu.fit.iuh.repositories;import org.springframework.data.jpa.repository.JpaRepository;import vn.edu.fit.iuh.enities.Experience;public interface ExperienceRepository extends JpaRepository<Experience, Long> {}

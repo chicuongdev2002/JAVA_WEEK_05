@@ -14,7 +14,8 @@ import java.util.List;
 public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long comp_id;
+    @Column(name = "comp_id")
+    private long id;
     @Column(name = "about",columnDefinition = "varchar(2000)")
     private String about;
     @Column(name = "email",columnDefinition = "varchar(255)")
@@ -26,8 +27,8 @@ public class Company {
     @Column(name = "webURL",columnDefinition = "varchar(2000)")
     private String web_url;
     @OneToOne
-    @JoinColumn(name = "address")
-    private Address address;
+    @JoinColumn(referencedColumnName = "add_id",name = "company")
+    private company company;
     @OneToMany(mappedBy = "company")
     private List<Job> jobs;
 

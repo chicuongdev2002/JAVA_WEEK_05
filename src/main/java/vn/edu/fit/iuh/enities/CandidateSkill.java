@@ -10,6 +10,7 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@IdClass(CandidateSkillID.class)
 public class CandidateSkill {
     private String more_infos;
     private SkillLevel skill_level;

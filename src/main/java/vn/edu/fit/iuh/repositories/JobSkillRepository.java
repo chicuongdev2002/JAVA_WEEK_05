@@ -1,0 +1,1 @@
+package vn.edu.fit.iuh.repositories;import org.springframework.data.jpa.repository.JpaRepository;import vn.edu.fit.iuh.enities.Job;import vn.edu.fit.iuh.enities.JobSkill;public interface JobSkillRepository extends JpaRepository<JobSkill, Job> {}

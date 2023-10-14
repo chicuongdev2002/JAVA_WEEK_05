@@ -15,6 +15,7 @@ import java.util.UUID;
 public class Candidate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "can_id")
     private long id;
     @Temporal(TemporalType.DATE)
     @Column(name = "dob",columnDefinition = "date")
@@ -26,8 +27,8 @@ public class Candidate {
     @Column(name = "phone",columnDefinition = "varchar(15)")
     private String phone;
    @OneToOne
-   @JoinColumn(referencedColumnName = "add_id",name = "address")
-    private Address adress;
+   @JoinColumn(referencedColumnName = "add_id",name = "company")
+    private company company;
    @OneToMany(mappedBy = "candidate")
    private List<CandidateSkill> candidateSkills;
    @OneToMany(mappedBy = "candidate")
@@ -41,7 +42,7 @@ public class Candidate {
 //        return adress.getId();
 //    }
 //    public void setAdress(UUID adressId) {
-//        this.adress = new Address(adressId);
+//        this.adress = new company(adressId);
 //    }
 
 //    @Override

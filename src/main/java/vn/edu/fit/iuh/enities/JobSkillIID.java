@@ -1,0 +1,1 @@
+package vn.edu.fit.iuh.enities;import lombok.AllArgsConstructor;import lombok.Data;import lombok.EqualsAndHashCode;import lombok.NoArgsConstructor;import java.io.Serializable;@AllArgsConstructor@NoArgsConstructor@Data@EqualsAndHashCodepublic class JobSkillIID implements Serializable {    private long job;    private long skill;}
