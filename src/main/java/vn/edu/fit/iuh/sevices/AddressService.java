@@ -2,23 +2,24 @@ package vn.edu.fit.iuh.sevices;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import vn.edu.fit.iuh.enities.company;
-import vn.edu.fit.iuh.repositories.companyRepository;
+import vn.edu.fit.iuh.enities.Address;
+import vn.edu.fit.iuh.repositories.AddressRepository;
+
 
 import java.util.List;
 import java.util.Optional;
 
-public class companySevices {
-    private final companyRepository companyRepository;
+public class AddressService {
+    private final AddressRepository addressRepository;
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
-    public companySevices(companyRepository companyRepository) {
-        this.companyRepository = companyRepository;
+    public AddressService(AddressRepository addressRepository) {
+        this.addressRepository = addressRepository;
     }
 
-    public boolean save(company company) {
+    public boolean save(Address address) {
         try {
-            companyRepository.save(company);
+            addressRepository.save(address);
 
             return true;
         } catch (Exception e) {
@@ -28,21 +29,21 @@ public class companySevices {
         return false;
     }
 
-    public Optional<company> findById(long id) {
-        return companyRepository.findById(id);
+    public Optional<Address> findById(long id) {
+        return addressRepository.findById(id);
     }
 
-    public List<company> findAll() {
-        return companyRepository.findAll();
+    public List<Address> findAll() {
+        return addressRepository.findAll();
     }
 
-    public Optional<Boolean> update(company company) {
-        if (!companyRepository.existsById(company.getId())) { // Sử dụng phương thức existsById để kiểm tra sự tồn tại
+    public Optional<Boolean> update(Address address) {
+        if (!addressRepository.existsById(address.getId())) { // Sử dụng phương thức existsById để kiểm tra sự tồn tại
             return Optional.empty(); // Trả về empty nếu không tồn tại
         }
 
         try {
-            companyRepository.save(company);
+            addressRepository.save(address);
             return Optional.of(true);
         } catch (Exception e) {
             logger.error(e.getMessage());
@@ -51,11 +52,11 @@ public class companySevices {
     }
 
     public Optional<Boolean> delete(long id) {
-        if (!companyRepository.existsById(id)) {
+        if (!addressRepository.existsById(id)) {
             return Optional.empty();
         }
         try {
-            companyRepository.deleteById(id);
+            addressRepository.deleteById(id);
             return Optional.of(true);
         } catch (Exception e) {
             logger.error(e.getMessage());

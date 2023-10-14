@@ -27,8 +27,8 @@ public class Company {
     @Column(name = "webURL",columnDefinition = "varchar(2000)")
     private String web_url;
     @OneToOne
-    @JoinColumn(referencedColumnName = "add_id",name = "company")
-    private company company;
+    @JoinColumn(referencedColumnName = "add_id",name = "address")
+    private Address address;
     @OneToMany(mappedBy = "company")
     private List<Job> jobs;
 

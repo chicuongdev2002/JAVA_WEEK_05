@@ -1,1 +1,1 @@
-package vn.edu.fit.iuh.repositories;import org.springframework.data.jpa.repository.JpaRepository;import vn.edu.fit.iuh.enities.company;public interface companyRepository extends JpaRepository<company, Long> {}
+package vn.edu.fit.iuh.repositories;import org.springframework.data.jpa.repository.JpaRepository;import vn.edu.fit.iuh.enities.Address;public interface AddressRepository extends JpaRepository<Address, Long> {}

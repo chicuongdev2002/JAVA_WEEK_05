@@ -27,8 +27,8 @@ public class Candidate {
     @Column(name = "phone",columnDefinition = "varchar(15)")
     private String phone;
    @OneToOne
-   @JoinColumn(referencedColumnName = "add_id",name = "company")
-    private company company;
+   @JoinColumn(referencedColumnName = "add_id",name = "address")
+    private Address address;
    @OneToMany(mappedBy = "candidate")
    private List<CandidateSkill> candidateSkills;
    @OneToMany(mappedBy = "candidate")

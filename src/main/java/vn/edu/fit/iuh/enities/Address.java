@@ -3,12 +3,12 @@ package vn.edu.fit.iuh.enities;
 import jakarta.persistence.*;
 import lombok.*;
 @Entity
-@Table(name = "company")
+@Table(name = "address")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class company {
+public class Address {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 @Column(name = "add_id")
@@ -22,9 +22,9 @@ public class company {
     private String number;
     @Column(name = "phone",columnDefinition = "varchar(7)")
     private String zipcode;
-    @OneToOne(mappedBy = "company")
+    @OneToOne(mappedBy = "address")
    private Candidate candidate;
-    @OneToOne(mappedBy = "company")
+    @OneToOne(mappedBy = "address")
    private Company company;
 
     @Override
