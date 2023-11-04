@@ -10,7 +10,6 @@ import java.util.UUID;
 @Entity
 @Table(name = "candidate")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class Candidate {
     @Id
@@ -26,13 +25,21 @@ public class Candidate {
     private String fullName;
     @Column(name = "phone",columnDefinition = "varchar(15)")
     private String phone;
-   @OneToOne(cascade = CascadeType.ALL)
+   @OneToOne(cascade = CascadeType.REMOVE,fetch = FetchType.EAGER)
    @JoinColumn(referencedColumnName = "add_id",name = "address")
     private Address address;
    @OneToMany(mappedBy = "candidate")
    private List<CandidateSkill> candidateSkills;
    @OneToMany(mappedBy = "candidate")
    private List<Experience> experiences;
+
+    public Candidate(LocalDate dob, String email, String fullName, String phone,Address address) {
+        this.dob = dob;
+        this.email = email;
+        this.fullName = fullName;
+        this.phone = phone;
+        this.address = address;
+    }
 
     @Override
     public String toString() {
@@ -42,7 +49,6 @@ public class Candidate {
                 ", email='" + email + '\'' +
                 ", fullName='" + fullName + '\'' +
                 ", phone='" + phone + '\'' +
-                ", address=" + address +
                 '}';
     }
 
