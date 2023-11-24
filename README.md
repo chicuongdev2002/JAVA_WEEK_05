@@ -2,12 +2,32 @@
 # Yêu cầu
 1. Tạo các enities sao cho khi thực thi sẽ tạo ra các bảng như hình
 ![image](https://github.com/chicuongdev2002/JAVA_WEEK5/assets/124854803/b827e762-9b6c-4ca9-835d-f4e2150bed52)   
-3. Viết các repositories interface
-4. Viết các lớp services
-5. Tạo các trang web cho phép công ty đăng tin tuyển người với các skill mong muốn
-6. Các ứng viên khi log vào sẽ được gợi ý các công việc có skill phù hợp với mình
+2. Viết các repositories interface
+![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/ba695782-1c7d-4d4b-b884-96c4fede0c7d)
+3. Viết các lớp services
+ ![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/b3e63ea1-19f6-477e-b657-1403547addf0)
+ ![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/e8aa3fea-97a2-4ed2-a957-02b25284bb6c)
+
+4. Tạo các trang web cho phép công ty đăng tin tuyển người với các skill mong muốn
+5. Các ứng viên khi log vào sẽ được gợi ý các công việc có skill phù hợp với mình
+   - Đăng nhập vào trang
+ ![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/dbdd5a38-0b45-4b06-8e31-4c2ea042aeaf)
+  - Hiện thị danh sách các công ty đang có công việc
+![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/9a9239b3-a76f-4e40-8dc2-052454a4a215)
+ - Xem công việc sẽ hiển thị các job hiện có của công ty tương ứng
+   ![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/640dc07d-8b3f-4a69-9fd4-ef7af49a81eb)
 7. Giúp các công ty tìm các ứng viên có skill phù hợp rồi gửi mail mời.
 8. Đề xuất một số skill mà ứng viên chưa có để học.
+# Admin
+## Candidate(Sử dụng Page)
+![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/e6d17561-8efc-41a4-8d4b-fe73b465aa6d)
+## Address
+- GetAll
+![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/8257d15b-b1d0-4846-8916-2410094a316c)
+-Insert
+![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/ed6054bb-b9f7-4fff-a100-5e29db64dd94)
+
+
 
 ```markdown
 
