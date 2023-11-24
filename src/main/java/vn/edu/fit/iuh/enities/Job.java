@@ -28,4 +28,13 @@ public class Job {
     @OneToMany(mappedBy = "job")
     List<JobSkill> jobSkills;
 
+    @Override
+    public String toString() {
+        return "Job{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                ", name='" + name + '\'' +
+                ", company=" + company +
+                '}';
+    }
 }

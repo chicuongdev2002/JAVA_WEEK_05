@@ -2,8 +2,13 @@ package vn.edu.fit.iuh.sevices;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import vn.edu.fit.iuh.enities.Address;
+import vn.edu.fit.iuh.enities.Candidate;
 import vn.edu.fit.iuh.enities.Company;
 import vn.edu.fit.iuh.repositories.AddressRepository;
 import vn.edu.fit.iuh.repositories.CompanyRepository;
@@ -75,6 +80,13 @@ public class CompanyService {
         }
 
         return Optional.of(false);
+    }
+    //Load du lieu phan trang
+    public Page<Company> findAllPage(int pageNo, int pageSize, String sortBy,
+                                       String sortDirection) {
+        Sort sort = Sort.by(Sort.Direction.fromString(sortDirection), sortBy);
+        Pageable pageable = PageRequest.of(pageNo, pageSize, sort);
+        return companyRepository.findAll(pageable);//findFirst.../findTop...
     }
 
 }
