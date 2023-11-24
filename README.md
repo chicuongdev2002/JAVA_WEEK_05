@@ -8,10 +8,16 @@
  ![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/b3e63ea1-19f6-477e-b657-1403547addf0)
  ![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/e8aa3fea-97a2-4ed2-a957-02b25284bb6c)
 
-6. Tạo các trang web cho phép công ty đăng tin tuyển người với các skill mong muốn
-7. Các ứng viên khi log vào sẽ được gợi ý các công việc có skill phù hợp với mình
-8. Giúp các công ty tìm các ứng viên có skill phù hợp rồi gửi mail mời.
-9. Đề xuất một số skill mà ứng viên chưa có để học.
+4. Tạo các trang web cho phép công ty đăng tin tuyển người với các skill mong muốn
+5. Các ứng viên khi log vào sẽ được gợi ý các công việc có skill phù hợp với mình
+   - Đăng nhập vào trang
+ ![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/dbdd5a38-0b45-4b06-8e31-4c2ea042aeaf)
+  - Hiện thị danh sách các công ty đang có công việc
+![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/9a9239b3-a76f-4e40-8dc2-052454a4a215)
+ - Xem công việc sẽ hiển thị các job hiện có của công ty tương ứng
+   ![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/640dc07d-8b3f-4a69-9fd4-ef7af49a81eb)
+7. Giúp các công ty tìm các ứng viên có skill phù hợp rồi gửi mail mời.
+8. Đề xuất một số skill mà ứng viên chưa có để học.
 # Admin
 ## Candidate(Sử dụng Page)
 ![image](https://github.com/chicuongdev2002/JAVA_WEEK_05/assets/124854803/e6d17561-8efc-41a4-8d4b-fe73b465aa6d)
